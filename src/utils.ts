@@ -29,7 +29,7 @@ export const moveCardToColumn = ({
       if (!card) return null;
 
       // If it is, we return the column name and the card.
-      return { previousColumn: column as Columns, card };
+      return { previousColumn: column as unknown as Columns, card };
 
       // Because we use map, that means we get an array of whatever we return.
       // So in this case, it will be an array of null, and one time the object above.
